@@ -1,0 +1,24 @@
+{
+  "name": "@markgarrigan/deepdiff",
+  "version": "0.0.1",
+  "description": "Get the differences between two javascript objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markgarrigan/deepdiff.git"
+  },
+  "keywords": [
+    "javascript",
+    "object",
+    "diff"
+  ],
+  "author": "Mark Garrigan",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/markgarrigan/deepdiff/issues"
+  },
+  "homepage": "https://github.com/markgarrigan/deepdiff#readme"
+}
