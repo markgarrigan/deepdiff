@@ -39,8 +39,8 @@ function compare(item1, item2, diffRef = diffs, key) {
   }
 
   // Convert the items to strings
-  string1 = JSON.stringify(item1)
-  string2 = JSON.stringify(item2)
+  const string1 = JSON.stringify(item1)
+  const string2 = JSON.stringify(item2)
 
   // The strings are the same
   // If were working with an array add the item to the array
@@ -56,7 +56,7 @@ function compare(item1, item2, diffRef = diffs, key) {
   // We need to dig deeper
   if (type1 === '[object Object]') {
     diffRef[key] = diffRef[key] || {}
-    deepDiff(item1, item2, diffRef[key])
+    deepdiff(item1, item2, diffRef[key])
     return
   }
 
@@ -79,17 +79,17 @@ function compare(item1, item2, diffRef = diffs, key) {
   }
 }
 
-function deepDiff(thing1, thing2, diffRef) {
+function deepdiff(thing1, thing2, diffRef) {
   diffs = !diffRef ? {} : diffs
   // Loop through the first object
-  for (key in thing1) {
+  for (const key in thing1) {
     if (thing1[key]) {
       compare(thing1[key], thing2[key], diffRef, key);
     }
   }
 
   // Loop through the second object and find missing items
-  for (key in thing2) {
+  for (const key in thing2) {
     if (thing2[key]) {
       compare(thing1[key], thing2[key], diffRef, key);
     }
@@ -98,4 +98,4 @@ function deepDiff(thing1, thing2, diffRef) {
   return diffs
 }
 
-export default deepDiff
+export default deepdiff
