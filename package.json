@@ -2,9 +2,12 @@
   "name": "@markgarrigan/deepdiff",
   "version": "0.0.1",
   "description": "Get the differences between two javascript objects.",
-  "main": "src/index.js",
+  "source": "src/index.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/markgarrigan/deepdiff/issues"
   },
-  "homepage": "https://github.com/markgarrigan/deepdiff#readme"
+  "homepage": "https://github.com/markgarrigan/deepdiff#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2"
+  }
 }
